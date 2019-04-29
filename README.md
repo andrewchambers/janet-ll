@@ -5,8 +5,7 @@ This is a rust crate providing low level bindings to the [janet](https://janet-l
 # versioning scheme
 
 The package major and minor versions follow the janet releases the
-headers match, the package is quite strict in enforcing this, as
-janet does not have stability in it's API. The patch version does
+bundled headers are compatible with. The patch version may, but does
 not necessarily match the janet release.
 
 # feature flags
