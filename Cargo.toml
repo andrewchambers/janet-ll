@@ -4,8 +4,8 @@ version = "0.4.1"
 authors = ["Andrew Chambers <ac@acha.ninja>"]
 edition = "2018"
 description = "Low level bindings to the janet language c api for writing native."
-repository = "https://github.com/andrewchambers/janet-native-ll"
-
+repository = "https://github.com/andrewchambers/janet-ll"
+license-file = "LICENSE"
 
 [features]
 
