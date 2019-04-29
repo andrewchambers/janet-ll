@@ -1,0 +1,23 @@
+[package]
+name = "janet-ll"
+version = "0.4.1"
+authors = ["Andrew Chambers <ac@acha.ninja>"]
+edition = "2018"
+description = "Low level bindings to the janet language c api for writing native."
+repository = "https://github.com/andrewchambers/janet-native-ll"
+
+
+[features]
+
+default = []
+
+# Link the amalgamation library into the application.
+link-amalg = []
+
+[dependencies]
+
+[build-dependencies]
+bindgen = "0.49.0"
+shlex = "0.1.1"
+cc = "1.0"
+
