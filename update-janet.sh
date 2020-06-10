@@ -2,7 +2,7 @@
 
 set -eux
 
-version="0.4.1"
+version="1.9.1"
 
 if ! test -d ./janet/.git
 then
@@ -14,8 +14,8 @@ git checkout master
 git pull
 git checkout "v${version}"
 git clean -fxd
-make amalg
+make
 mkdir -p ../csrc
 cp build/janet.c ../csrc/
 cp build/janet.h ../csrc/
-cp src/include/janetconf.h ../csrc/
+cp src/conf/janetconf.h ../csrc/
