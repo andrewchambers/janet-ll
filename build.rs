@@ -13,7 +13,6 @@ fn main() {
     #[cfg(feature = "link-amalg")]
     cc::Build::new()
         .file("csrc/janet.c")
-        .file("csrc/shell.c")
         .include("csrc")
         .compile("janet");
 
