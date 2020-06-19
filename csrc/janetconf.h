@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2019 Calvin Rose
+* Copyright (c) 2020 Calvin Rose
 *
 * Permission is hereby granted, free of charge, to any person obtaining a copy
 * of this software and associated documentation files (the "Software"), to
@@ -20,28 +20,52 @@
 * IN THE SOFTWARE.
 */
 
-/* Configure Janet. Edit this file to customize the build */
+/* This is an example janetconf.h file. This will be usually generated
+ * by the build system. */
 
 #ifndef JANETCONF_H
 #define JANETCONF_H
 
-#define JANET_VERSION "0.4.1"
+#define JANET_VERSION_MAJOR 1
+#define JANET_VERSION_MINOR 10
+#define JANET_VERSION_PATCH 1
+#define JANET_VERSION_EXTRA ""
+#define JANET_VERSION "1.10.1"
 
 /* #define JANET_BUILD "local" */
+
+/* These settings all affect linking, so use cautiously. */
 /* #define JANET_SINGLE_THREADED */
 /* #define JANET_NO_DYNAMIC_MODULES */
+/* #define JANET_NO_NANBOX */
+/* #define JANET_API __attribute__((visibility ("default"))) */
+
+/* These settings should be specified before amalgamation is
+ * built. */
+/* #define JANET_NO_DOCSTRINGS */
+/* #define JANET_NO_SOURCEMAPS */
+/* #define JANET_REDUCED_OS */
+/* #define JANET_NO_PROCESSES */
 /* #define JANET_NO_ASSEMBLER */
 /* #define JANET_NO_PEG */
+/* #define JANET_NO_NET */
 /* #define JANET_NO_TYPED_ARRAY */
 /* #define JANET_NO_INT_TYPES */
-/* #define JANET_REDUCED_OS */
-/* #define JANET_API __attribute__((visibility ("default"))) */
+
+/* Other settings */
+/* #define JANET_NO_PRF */
+/* #define JANET_NO_UTC_MKTIME */
+/* #define JANET_NO_REALPATH */
+/* #define JANET_NO_SYMLINKS */
+/* #define JANET_NO_UMASK */
 /* #define JANET_OUT_OF_MEMORY do { printf("janet out of memory\n"); exit(1); } while (0) */
+/* #define JANET_EXIT(msg) do { printf("C assert failed executing janet: %s\n", msg); exit(1); } while (0) */
+/* #define JANET_TOP_LEVEL_SIGNAL(msg) call_my_function((msg), stderr) */
 /* #define JANET_RECURSION_GUARD 1024 */
 /* #define JANET_MAX_PROTO_DEPTH 200 */
 /* #define JANET_MAX_MACRO_EXPAND 200 */
 /* #define JANET_STACK_MAX 16384 */
-/* #define JANET_NO_NANBOX */
-/* #define JANET_WALIGN 8 */
+/* #define JANET_OS_NAME my-custom-os */
+/* #define JANET_ARCH_NAME pdp-8 */
 
 #endif /* end of include guard: JANETCONF_H */

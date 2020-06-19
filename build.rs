@@ -1,5 +1,5 @@
 fn main() {
-    let whitelist_regex = "^[jJ]anet.*";
+    let whitelist_regex = "^[jJ]anet|ANET.*";
 
     let bindings = bindgen::Builder::default()
         .header("./csrc/janet.h")
